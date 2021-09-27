@@ -1,0 +1,19 @@
+#定义变量
+src = sub.o add.o mult.o div.o main.o
+target = app3
+$(target):$(src)
+	$(CC) $(src) -o $(target)
+sub.o:sub.c
+	gcc -c sub.c -o sub.o
+
+mult.o:mult.c
+	gcc -c mult.c -o mult.o
+
+add.o:add.c
+	gcc -c add.c -o add.o
+
+div.o:div.c
+	gcc -c div.c -o div.o
+
+mian.o:main.c
+	gcc -c main.c -o main.o
