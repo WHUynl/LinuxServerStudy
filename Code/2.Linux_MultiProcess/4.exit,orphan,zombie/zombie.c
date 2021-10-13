@@ -15,7 +15,7 @@ int main() {
         }
 
     } else if(pid == 0) {
-        // 当前是子进程
+        // 当前是子进程,ps  aux后可以观察到 子进程状态为zombie
         printf("i am child process, pid : %d, ppid : %d\n", getpid(),getppid());
        
     }

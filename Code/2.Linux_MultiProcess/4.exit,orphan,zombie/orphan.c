@@ -13,10 +13,12 @@ int main() {
         printf("i am parent process, pid : %d, ppid : %d\n", getpid(), getppid());
 
     } else if(pid == 0) {
-        sleep(1);
+        sleep(1);//保证父进程先结束
         // 当前是子进程
         printf("i am child process, pid : %d, ppid : %d\n", getpid(),getppid());
-       
+       /*
+       ppid：变为1，即代表孤儿子进程被init进程接受了。
+       */
     }
 
     // for循环
